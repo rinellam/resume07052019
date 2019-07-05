@@ -179,8 +179,7 @@ header {
 .work-history-wrap {
     grid-area: work-history-wrap;
     background: #F2F2E6;
-    padding: 1rem 1rem;
-    margin-bottom: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
 }
 
 .lg-subhead-wrap01 {
@@ -308,7 +307,21 @@ img.regular-image {
 
 /* ///// Media Queries ///// */
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 768px){
+    .education-wrap {
+        display: grid;
+        display: -ms-grid;
+        grid-template: 
+            "education-cards education-cards"
+            "education-cards education-cards"
+            "education-cards education-cards"
+            / 1fr 1fr;
+            grid-column-gap: 1rem;
+            }
+
+}
+
+@media screen and (min-width: 990px){
 
 /* ///// fonts ///// */
 
@@ -341,7 +354,7 @@ img.regular-image {
 }
 
 header {
-    padding: 2rem 2.5rem;
+    padding: 2rem 3rem;
     margin: 3rem 0 1rem 0;
     border-radius: 8px;
 }
@@ -436,3 +449,4 @@ header {
             border-radius: 6px;
             } 
 }
+
