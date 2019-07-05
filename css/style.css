@@ -414,6 +414,9 @@ header {
     display: -ms-grid;
     grid-template: 
         "work-history-box"
+        "work-history-box"
+        "work-history-box"
+        "work-history-box"
         / 1fr;
         grid-row-gap: 1em;
         }
