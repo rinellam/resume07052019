@@ -160,7 +160,9 @@ html {
     margin: 0;
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto auto auto auto auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
     "header"
     "lg-subhead-wrap01"
     "education-wrap"
@@ -202,59 +204,67 @@ header {
 }
 
 .education-wrap {
-display: grid;
-display: -ms-grid;
-grid-template: 
-    "education-cards"
-    "education-cards"
-    "education-cards"
-    "education-cards"
-    "education-cards" 
-    "education-cards"
-    / 1fr;
-    grid-row-gap: 1em;
-    }
-
-    .education-cards {
-        display: grid;
-        display: -ms-grid;
-        background: #FFFFFF;
-        grid-template:
-        "img"
-        "styled-list"
-        "nobull-list-dk"
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-rows: auto 1em auto 1em auto 1em auto 1em auto 1em auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
+        "education-cards"
+        "education-cards"
+        "education-cards"
+        "education-cards"
+        "education-cards" 
+        "education-cards"
         / 1fr;
-        padding: 2em 3em 2em 3em;
-        border-radius: 6px;
+        grid-row-gap: 1em;
         }
+
+        .education-cards {
+            display: grid;
+            display: -ms-grid;
+            background: #FFFFFF;
+            -ms-grid-rows: auto auto auto;
+            -ms-grid-columns: 1fr;
+                grid-template:
+            "img"
+            "styled-list"
+            "nobull-list-dk"
+            / 1fr;
+            padding: 2em 3em 2em 3em;
+            border-radius: 6px;
+            }
         
         .education-cards li:not(:last-child) {
         margin-bottom: .75rem;
         }
 
 .work-history-wrap {
-display: grid;
-display: -ms-grid;
-grid-template: 
-    "work-history-box"
-    / 1fr;
-    grid-row-gap: 1em;
-    }
-    
-    .work-history-box {
-        display: grid;
-        display: -ms-grid;
-        grid-template:
-        "sm-subhead-text"
-        "smaller-subhead-text"
-        "date-text"
-        "initcaps-copy-white"
-        "nobull-list-dk"
+    display: grid;
+    display: -ms-grid;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
+        "work-history-box"
         / 1fr;
-        background: #353E4A;
-        padding: 2em;
-        border-radius: 6px;
-        } 
+        grid-row-gap: 1em;
+        }
+    
+        .work-history-box {
+            display: grid;
+            display: -ms-grid;
+            -ms-grid-rows: auto auto auto auto auto;
+            -ms-grid-columns: 1fr;
+                grid-template:
+            "sm-subhead-text"
+            "smaller-subhead-text"
+            "date-text"
+            "initcaps-copy-white"
+            "nobull-list-dk"
+            / 1fr;
+            background: #353E4A;
+            padding: 2em;
+            border-radius: 6px;
+            } 
 
         .work-history-box li:not(:last-child) {
         margin-bottom: .75rem;
@@ -264,7 +274,9 @@ grid-template:
 .lg-subhead-wrap01 {
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
     "subhead-box"
     / 1fr;
     }
@@ -272,15 +284,19 @@ grid-template:
 .subhead-box {
     display: grid;
     display: -ms-grid;
-    grid-template:
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template:
     "lg-subhead-text"
     / 1fr;
-    }
+        }
 
 .lg-subhead-wrap02 {
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
     "lg-subhead-text"
     / 1fr;
     }
@@ -288,10 +304,13 @@ grid-template:
 .subhead-box {
     display: grid;
     display: -ms-grid;
-    grid-template:
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template:
     "lg-subhead-text"
     / 1fr;
 }
+
 img.round-image {
     width: 10rem;
     height: 10rem;
@@ -311,7 +330,9 @@ img.regular-image {
     .education-wrap {
         display: grid;
         display: -ms-grid;
-        grid-template: 
+        -ms-grid-rows: auto auto auto;
+        -ms-grid-columns: 1fr 1rem 1fr;
+            grid-template: 
             "education-cards education-cards"
             "education-cards education-cards"
             "education-cards education-cards"
@@ -348,7 +369,9 @@ img.regular-image {
     margin: 0;
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto auto auto auto auto;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template: 
     "header header header"
     "lg-subhead-wrap01 lg-subhead-wrap01 lg-subhead-wrap01"
     "education-wrap education-wrap education-wrap"
@@ -389,17 +412,29 @@ header {
 }
 .small-text-wrap {
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
 }
 
 .education-wrap {
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto auto;
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+        grid-template: 
         "education-cards education-cards education-cards"
         "education-cards education-cards education-cards"
         / 1fr 1fr 1fr;
@@ -409,15 +444,24 @@ header {
             display: grid;
             display: -ms-grid;
             background: #FFFFFF;
-            grid-template:
+            -ms-grid-rows: auto auto auto;
+            -ms-grid-columns: 1fr;
+                grid-template:
             "img"
             "styled-list"
             "nobull-list-dk"
             / 1fr;
             /* align images center */
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             /*padding: 2em 3em 2em 3em;*/
             border-radius: 6px;
             }
@@ -429,7 +473,9 @@ header {
 .work-history-wrap {
     display: grid;
     display: -ms-grid;
-    grid-template: 
+    -ms-grid-rows: auto 1em auto 1em auto 1em auto;
+    -ms-grid-columns: 1fr;
+        grid-template: 
         "work-history-box"
         "work-history-box"
         "work-history-box"
@@ -441,7 +487,9 @@ header {
         .work-history-box {
             display: grid;
             display: -ms-grid;
-            grid-template:
+            -ms-grid-rows: auto auto auto auto auto;
+            -ms-grid-columns: 1fr;
+                grid-template:
             "sm-subhead-text"
             "smaller-subhead-text"
             "date-text"
