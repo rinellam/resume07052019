@@ -179,25 +179,25 @@ header {
 .work-history-wrap {
     grid-area: work-history-wrap;
     background: #F2F2E6;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 5rem 1rem;
 }
 
 .lg-subhead-wrap01 {
     grid-area: lg-subhead-wrap01;
     background: #F2F2E6;
-    padding: 2rem 0 1rem 1rem;
+    padding: 3rem 0 1rem 1rem;
 }
 
 .lg-subhead-wrap02 {
     grid-area: lg-subhead-wrap02;
     background: #F2F2E6;
-    padding: 2rem 0 1rem 1rem;
+    padding: 3rem 0 1rem 1rem;
 }
 
 .education-wrap {
     grid-area: education-wrap;
     background: #F2F2E6;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 5rem 1rem;
     margin-bottom: 1rem;
 }
 
@@ -364,25 +364,25 @@ header {
 }
 
 .work-history-wrap {
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 3rem 6rem 3rem;
     margin-bottom: 3.5rem;
     border-radius: 8px;
 }
 
 .lg-subhead-wrap01 {
-    padding: 2rem 0 1rem 3rem;
+    padding: 3rem 0 1rem 3rem;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
 
 .lg-subhead-wrap02 {
-    padding: 2rem 0 1rem 3rem;
+    padding: 3rem 0 1rem 3rem;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
 
 .education-wrap {
-    padding: 1rem 3rem 3rem 3rem;
+    padding: 1rem 3rem 6rem 3rem;
     margin-bottom: 1rem;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
